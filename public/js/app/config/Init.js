@@ -36,6 +36,9 @@ require.config({
         // Backbone.validateAll plugin (https://github.com/gfranko/Backbone.validateAll)
         "backbone.validateAll":["backbone"]
     }
+    // For easier development, disable browser caching
+    // Of course, this should be removed in a production environment
+    , urlArgs: 'bust=' + (new Date()).getTime() // TODO
 });
 
 // Includes Desktop Specific JavaScript files here (or inside of your Desktop router)
